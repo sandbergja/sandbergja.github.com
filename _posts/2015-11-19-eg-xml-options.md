@@ -23,7 +23,7 @@ XPATH: //open-ils:volume[@opac_visible="t" and @deleted="f"][@lib="LBCCLIB"]//op
 
 Where open-ils namespace is set to http://open-ils.org/spec/holdings/v1 and LBCCLIB is the shortname for the branch I care about.  Note that Supercat returns a _lot_ of data, so it could be much faster.
 
-* SRU
+##SRU
 
 Record schema: MARCXML version 1.1
 URL: http://libcat.linnbenton.edu/opac/extras/sru
