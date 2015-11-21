@@ -22,6 +22,12 @@ Project Euler problems in Python and Java
 
 John Deere stuff
 
+Interplanetary Internet
+
+Open Source Ecology
+
+Open textbooks
+
 #Projects
 
 Awesomeizer
