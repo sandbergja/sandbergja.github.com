@@ -2,6 +2,7 @@
 layout: post
 title: Getting XML holdings data out of the Evergreen ILS
 tags: Evergreen
+categories: Systems
 ---
 As I work on discovery layer-related projects, I keep revisiting the question of what the best way to get holdings data from Evergreen is.  EG gives us a number of options here, so here are the options I've come across so far.
 
