@@ -2,6 +2,7 @@
 layout: post
 title: Using Evergreen ILS to authenticate EZProxy users using SIP2 and an SSH tunnel
 tags: Evergreen EZProxy
+categories: systems
 ---
 
 EZProxy now checks with Evergreen to see if a user can access our
