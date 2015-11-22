@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open Source Club activities, 2014-
-tags: osc foss
+tags: OSC FOSS
 categories: open-culture
 ---
 
