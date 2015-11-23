@@ -8,7 +8,7 @@ categories: open-culture
 ##Demos
 
 * We created a basic website using [node.js](https://nodejs.org/en/) and the [MEAN stack](http://meanjs.org/).
-* We explored Alaskan geographic, lake, and street name data using the open source [http://qgis.org/en/site/](QGIS) software.  This led to a discussion of some interesting practical applications for a tool like QGIS and some nice sources for GIS data.
+* We explored Alaskan geographic, lake, and street name data using the open source [QGIS](http://qgis.org/en/site/) software.  This led to a discussion of some interesting practical applications for a tool like QGIS and some nice sources for GIS data.
 * We walked through a [Solr](https://lucene.apache.org/solr/) [schema.xml](https://wiki.apache.org/solr/SchemaXml) file -- actually being used in production -- to learn how solr stores data.  We talked about stemming and other information retrieval concepts
 
 ##Activities
