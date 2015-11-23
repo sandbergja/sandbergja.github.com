@@ -4,7 +4,7 @@ title: Getting XML holdings data out of the Evergreen ILS
 tags: Evergreen
 categories: Systems
 ---
-As I work on discovery layer-related projects, I keep revisiting the question of what the best way to get holdings data from Evergreen is.  EG gives us a number of options here, so here are the options I've come across so far.
+As I work on discovery layer-related projects, I keep revisiting the question of what the best way to get holdings data from Evergreen is.  EG gives us a number of options here; here's what I've come across so far.
 
 #XML
 
@@ -25,6 +25,8 @@ XPATH: //open-ils:volume[@opac_visible="t" and @deleted="f"][@lib="LBCCLIB"]//op
 Where open-ils namespace is set to http://open-ils.org/spec/holdings/v1 and LBCCLIB is the shortname for the branch I care about.  Note that Supercat returns a _lot_ of data, so it could be much faster.
 
 ##SRU
+
+Unlike supercat, which relies on Evergreen-specific namespaces, SRU is a widely-adopted standard.
 
 Record schema: MARCXML version 1.1
 
