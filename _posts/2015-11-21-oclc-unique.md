@@ -1,9 +1,23 @@
 ---
 layout: post
 title: Finding Unique Holdings using OCLC's Worldcat Search API
-tags: OCLC python
+tags: OCLC python Evergreen
 categories: systems
 ---
+
+
+Created a report:
+Displayed fields
+* column renamed oclc: Bibliographic Record::Flattened MARC Fields::Normalized Value
+* column renamed call_number: Bibliographic Record::Call Numbers::Call Number Label
+* column renamed title: Bibliographic Record::Simple Record Extracts::Title Proper
+Base Filters
+* Bibliographic Record::Is Deleted = false
+* Bibliographic Record::Call Numbers::Item::Circ lib is ours
+* Bibliographic Record::Call Numbers::Item::Is deleted = false
+
+
+
 
 
 `import csv, sys`
