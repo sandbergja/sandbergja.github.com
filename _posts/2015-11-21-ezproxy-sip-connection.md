@@ -5,30 +5,20 @@ tags: Evergreen EZProxy
 categories: systems
 ---
 
+# Background
+
 EZProxy now checks with Evergreen to see if a user can access our
 databases from off campus.  This means that to log in to databases,
 students and staff can use their X number (or OSU 9 number) and year
 of birth.
 
-Check it out here: http://ezproxy.libweb.linnbenton.edu:2048/login
-
-This also means that anybody can troubleshoot off-campus database
-access issues now by verifying DoBs and barcodes in Evergreen.  If a
-patron has expired in Evergreen, they will no longer be able to access
-databases from off-campus.  However, fines and overdues will not
-impact a patron's ability to access databases.
-
-I am going to update our procedures accordingly.  Also, just between
-us, the old logins will continue to work until I de-activate them
-(probably end of Fall term, when most everybody should be used to the
-new way of logging in).
-
-
-We have had some issues with people trying to login to EzProxy with a lower-case "x" in their X number.  Since EzProxy credentials and Evergreen credentials are now the same, patrons need to enter a capital X.
-
-However, I just wrote a script that will force capitals when folks type their X number into the proxy server login.
+# SIP setup
 
 Setting up SIP accounts on evergreen (oils_sip.xml, etc.)
+
+how to test SIP
+
+# EZProxy setup
 
 I'd like to have our EZProxy server authenticate users using SIP2,
 which is totally supported and documented here:
@@ -41,15 +31,29 @@ authentication/authorization check over SSH, but am not quite sure how
 best to do that.  Do either of these approaches make sense?
 
 
-Empowered SHD staff to troubleshoot EZProxy problems: 
-https://docs.google.com/document/d/1doFapr1f2LoDNO11HQz_bADzBOn9DiP1pLqW3EFcEdA/edit#bookmark=id.mgzw9trk9hmb
-
-`
+```
 #!/bin/bash
 a=`/bin/ps -ef | /bin/grep ssh | /bin/grep -v grep | /bin/wc -l`
 if [ $a -eq 0 ]; then
   echo "Restarting ssh tunnel"
   /usr/bin/ssh -L 6001:localhost:6001 sip_user@evergreen_server -f -N
 f
-`
+```
 .ssh authorize without password
+
+
+# Implications
+
+This also means that anybody can troubleshoot off-campus database
+access issues now by verifying DoBs and barcodes in Evergreen.  If a
+patron has expired in Evergreen, they will no longer be able to access
+databases from off-campus.  However, fines and overdues will not
+impact a patron's ability to access databases.
+
+We have had some issues with people trying to login to EzProxy with a lower-case "x" in their X number.  Since EzProxy credentials and Evergreen credentials are now the same, patrons need to enter a capital X.
+
+However, I just wrote a script that will force capitals when folks type their X number into the proxy server login.
+
+
+Empowered SHD staff to troubleshoot EZProxy problems: 
+https://docs.google.com/document/d/1doFapr1f2LoDNO11HQz_bADzBOn9DiP1pLqW3EFcEdA/edit#bookmark=id.mgzw9trk9hmb
