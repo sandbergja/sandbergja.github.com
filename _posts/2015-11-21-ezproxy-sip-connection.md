@@ -43,3 +43,13 @@ best to do that.  Do either of these approaches make sense?
 
 Empowered SHD staff to troubleshoot EZProxy problems: 
 https://docs.google.com/document/d/1doFapr1f2LoDNO11HQz_bADzBOn9DiP1pLqW3EFcEdA/edit#bookmark=id.mgzw9trk9hmb
+
+`
+#!/bin/bash
+a=`/bin/ps -ef | /bin/grep ssh | /bin/grep -v grep | /bin/wc -l`
+if [ $a -eq 0 ]; then
+  echo "Restarting ssh tunnel"
+  /usr/bin/ssh -L 6001:localhost:6001 sip_user@evergreen_server -f -N
+f
+`
+.ssh authorize without password
