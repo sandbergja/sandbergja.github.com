@@ -23,4 +23,4 @@ For the more coding-focused among us, we attempted two [Project Euler](https://p
 
 ##Projects
 
-Awesomeizer
+Awesomeizer http://www.news.cornell.edu/essentials/2015/02/everything-awesome
