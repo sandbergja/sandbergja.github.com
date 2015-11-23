@@ -13,7 +13,7 @@ categories: open-culture
 
 ##Activities
 
-For the more coding-focused among us, we attempted two [Project Euler](https://projecteuler.net/) coding problems.  We spent most of the club meeting talking through one of these problems, before taking a stab at a Python or Java solution.
+* For the more coding-focused among us, we attempted two [Project Euler](https://projecteuler.net/) coding problems.  We spent most of the club meeting talking through one of these problems, before taking a stab at a Python or Java solution.
 
 ##Discussions and presentations
 * We had a lively discussion of [John Deere's proprietary tractor software](http://www.wired.com/2015/04/dmca-ownership-john-deere/).
@@ -23,4 +23,4 @@ For the more coding-focused among us, we attempted two [Project Euler](https://p
 
 ##Projects
 
-Awesomeizer http://www.news.cornell.edu/essentials/2015/02/everything-awesome
+* We started to build an [Awesomeizer](http://www.news.cornell.edu/essentials/2015/02/everything-awesome), based on the one at Cornell University.  The project never got past the planning stages, but it was very fun to think about!
