@@ -37,7 +37,7 @@ a=`/bin/ps -ef | /bin/grep ssh | /bin/grep -v grep | /bin/wc -l`
 if [ $a -eq 0 ]; then
   echo "Restarting ssh tunnel"
   /usr/bin/ssh -L 6001:localhost:6001 sip_user@evergreen_server -f -N
-f
+fi
 ```
 .ssh authorize without password
 
