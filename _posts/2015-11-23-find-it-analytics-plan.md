@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting XML holdings data out of the Evergreen ILS
+title: Collecting actionable analytics from our Blacklight-based discovery layer using the ahoy gem
 tags: Blacklight data-driven_decisions
 categories: Systems
 ---
