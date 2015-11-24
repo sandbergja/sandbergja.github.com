@@ -31,14 +31,14 @@ authentication/authorization check over SSH, but am not quite sure how
 best to do that.  Do either of these approaches make sense?
 
 
-```
+{% highlight bash %}
 #!/bin/bash
 a=`/bin/ps -ef | /bin/grep ssh | /bin/grep -v grep | /bin/wc -l`
 if [ $a -eq 0 ]; then
   echo "Restarting ssh tunnel"
   /usr/bin/ssh -L 6001:localhost:6001 sip_user@evergreen_server -f -N
 fi
-```
+{% endhighlight %}
 .ssh authorize without password
 
 
