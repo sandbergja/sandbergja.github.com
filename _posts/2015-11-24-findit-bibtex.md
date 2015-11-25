@@ -4,3 +4,4 @@ title: Using BibTeX and citeproc to provide accurate citations in a Blacklight-b
 tags: Blacklight BibTeX
 categories: Systems
 ---
+Wanted most of this work done during index time, rather than at search time.
