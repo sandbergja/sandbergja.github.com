@@ -4,7 +4,7 @@ title: Using BibTeX and citeproc to provide accurate citations in a Blacklight-b
 tags: Blacklight BibTeX
 categories: Systems
 ---
-#Background
+##Background
 A number of goals related to proper citations in WR courses:
 * WR121 course objective: Cite sources using Modern Language Association (MLA) conventions, including a 'Works Cited' page.
 * WR123 course objective: To help students use a systematic research process to present information in a format commonly assigned in college work.
@@ -17,7 +17,8 @@ As such, our information instruction sessions devote time to demonstrating use o
 
 Blacklight includes a built-in citation feature for APA, MLA, and Chicago, based on some hard work from Stanford.  However, there are a number of mistakes in the built-in citations, particularly for non-book items.
 
-##Citeproc
+###Citeproc
 
-#Overview of a Citeproc-based workflow
+##Overview of a Citeproc-based workflow
 Wanted most of this work done during index time, rather than at search time.
+However, didn't want to rely on storing html in MARC.
