@@ -5,24 +5,27 @@ tags: Evergreen EZProxy
 categories: systems
 ---
 
-# Background
+## Summary
 
-EZProxy now checks with Evergreen to see if a user can access our
-databases from off campus.  This means that to log in to databases,
+This post documents how Linn-Benton Community College set up an encrypted SIP2 connection between EZProxy and our Evergreen ILS.  This simplified library workflows and the number of passwords patrons needed to remember.
+
+Now, to log in to databases from off-campus,
 students and staff can use their X number (or OSU 9 number) and year
-of birth.
+of birth, which is the same as Evergreen credentials.
 
-# SIP setup
+## SIP setup
 
-Setting up SIP accounts on evergreen (oils_sip.xml, etc.)
+Our ILS sysadmin set up a SIP user for us to use.  This process is a bit complex, but is well documented in the [official Evergreen documentation](http://docs.evergreen-ils.org/2.7/_sip_server.html#_adding_sip_users).
 
 how to test SIP
 
-# EZProxy setup
+## EZProxy setup
 
 I'd like to have our EZProxy server authenticate users using SIP2,
 which is totally supported and documented here:
 http://www.oclc.org/support/services/ezproxy/documentation/usr/sip.en.html.
+
+Using log file to find the SIP requests that are going out.
 
 However, I am not enthusiastic about sending unencrypted patron login
 information over Telnet or raw sockets, and neither is our ILS
@@ -42,9 +45,11 @@ fi
 .ssh authorize without password
 
 
-# Implications
+## Implications
 
-This also means that anybody can troubleshoot off-campus database
+This means that we no longer have to manually add EZProxy Users, which was a time-consuming workflow.
+
+This also means that all reference and SHD staff can troubleshoot off-campus database
 access issues now by verifying DoBs and barcodes in Evergreen.  If a
 patron has expired in Evergreen, they will no longer be able to access
 databases from off-campus.  However, fines and overdues will not
