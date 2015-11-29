@@ -21,17 +21,16 @@ how to test SIP
 
 ## EZProxy setup
 
-I'd like to have our EZProxy server authenticate users using SIP2,
+EZProxy server authenticate users using SIP2,
 which is totally supported and documented here:
 http://www.oclc.org/support/services/ezproxy/documentation/usr/sip.en.html.
 
-Using log file to find the SIP requests that are going out.
+However, I was not enthusiastic about sending unencrypted patron login
+information over Telnet or raw sockets, and neither was our ILS
+sysadmin.  Therefore, we used SSH tunnel.
 
-However, I am not enthusiastic about sending unencrypted patron login
-information over Telnet or raw sockets, and neither is our ILS
-sysadmin.  I'd like to figure out a way to perform the SIP2
-authentication/authorization check over SSH, but am not quite sure how
-best to do that.  Do either of these approaches make sense?
+Using log file to find the SIP requests that are going out.
+.ssh authorize without password
 
 
 {% highlight bash %}
@@ -42,7 +41,6 @@ if [ $a -eq 0 ]; then
   /usr/bin/ssh -L 6001:localhost:6001 sip_user@evergreen_server -f -N
 fi
 {% endhighlight %}
-.ssh authorize without password
 
 
 ## Implications
