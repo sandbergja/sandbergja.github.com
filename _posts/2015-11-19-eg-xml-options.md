@@ -6,11 +6,11 @@ categories: Systems
 ---
 As I work on discovery layer-related projects, I keep revisiting the question of what the best way to get holdings data from Evergreen is.  EG gives us a number of options here; here's what I've come across so far.
 
-#XML
+##XML
 
 There are several options in the XML realm:
 
-##Supercat
+###Supercat
 
 The atom-full version of Supercat includes holdings data.
 
@@ -24,7 +24,7 @@ XPATH: //open-ils:volume[@opac_visible="t" and @deleted="f"][@lib="LBCCLIB"]//op
 
 Where open-ils namespace is set to http://open-ils.org/spec/holdings/v1 and LBCCLIB is the shortname for the branch I care about.  Note that Supercat returns a _lot_ of data, so it could be much faster.
 
-##SRU
+###SRU
 
 Unlike supercat, which relies on Evergreen-specific namespaces, SRU is a widely-adopted standard.
 
@@ -38,5 +38,13 @@ http://libcat.linnbenton.edu/opac/extras/sru?version=1.1&operation=searchRetriev
 
 Some documentation about using SRU with Evergreen: http://evergreen-ils.org/dokuwiki/doku.php?id=evergreen-admin:sru_and_z39.50
 
-Holdings data can be found in the 999
+Holdings data can be found in the 999? Or is this just local usage?
+
+###OpenSearch
+
+http://libcat.linnbenton.edu/opac/extras/opensearch/1.1/-/marcxml-full/tcn/22222
+
+
+##JSON
+
 
