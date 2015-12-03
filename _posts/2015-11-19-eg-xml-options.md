@@ -24,27 +24,19 @@ XPATH: //open-ils:volume[@opac_visible="t" and @deleted="f"][@lib="LBCCLIB"]//op
 
 Where open-ils namespace is set to http://open-ils.org/spec/holdings/v1 and LBCCLIB is the shortname for the branch I care about.  Note that Supercat returns a _lot_ of data, so it could be much faster.
 
-###SRU
-
-Unlike supercat, which relies on Evergreen-specific namespaces, SRU is a widely-adopted standard.
-
-Record schema: MARCXML version 1.1
-
-URL: http://libcat.linnbenton.edu/opac/extras/sru
-
-Example Query URL (using Hemingway as the search term): http://libcat.linnbenton.edu/opac/extras/sru?version=1.1&operation=searchRetrieve&query=hemingway&maximumRecords=0
-
-http://libcat.linnbenton.edu/opac/extras/sru?version=1.1&operation=searchRetrieve&query=257595&maximumRecords=1
-
-Some documentation about using SRU with Evergreen: http://evergreen-ils.org/dokuwiki/doku.php?id=evergreen-admin:sru_and_z39.50
-
-Holdings data can be found in the 999? Or is this just local usage?
-
 ###OpenSearch
+A more documented standard!  Gives you pretty much the same data, though
+
 
 http://libcat.linnbenton.edu/opac/extras/opensearch/1.1/-/marcxml-full/tcn/22222
 
 
 ##JSON
 
+http://libcat.linnbenton.edu/gateway?service=open-ils.cat&method=open-ils.cat.asset.copy_tree.retrieve&param=[AUTH TOKEN]&param=294385&param=7
 
+Where 294385 is a TCN and 7 is our ou id.
+
+To get an auth token Within the staff client, press control+shift+f7 to get a command line interface at the top of the screen (as long as you have the DEBUG_CLIENT permission). Enter the command `ses()`, and you will get a token that you can use.
+
+The gateway there is actually an older mechanism for external clients to access OpenSRF, and newer code uses osrf-http-translator, but that service expects you to POST your requests instead of GET them and the format is more complicated.
