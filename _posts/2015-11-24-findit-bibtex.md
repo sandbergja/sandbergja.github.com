@@ -17,6 +17,7 @@ Blacklight's built-in citation feature creates APA, MLA, and Chicago citation, t
 
 ###Citeproc
 The Ruby implementation of Citeproc converts Citation Style Language (CSL) strings into properly formatted citations for dozens of different citation standards.  These technologies form the basis of popular citation software like Zotero and Mendeley.  I wanted to harness some of the [Citeproc gems](https://github.com/inukshuk/citeproc)' power and flexibility to improve the citations I was seeing. 
+
 ##Overview of a Citeproc-based workflow
 To save users' time, I wanted to run as much of this process while new documents were being indexed into the collection, rather than when the user actually wanted to create a citation.
 However, I felt nervous about storing fully formatted html or XML in the MARC files I indexed.  I also wanted to retain the flexibility of switching citation styles according to demand without having to re-index our entire collection.  I decided to store information in the very simple (but descriptive) BibTeX format during index time, leaving Citeproc to run its magic when users requested a citation.
