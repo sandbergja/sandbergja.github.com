@@ -32,6 +32,7 @@ http://libcat.linnbenton.edu/opac/extras/opensearch/1.1/-/marcxml-full/tcn/22222
 
 
 ##JSON
+I had a request that our Find It interface include due dates for holdings that are checked out.  Jason at Equinox suggested that I take a look at using OpenSRF to get these data:
 
 http://libcat.linnbenton.edu/gateway?service=open-ils.cat&method=open-ils.cat.asset.copy_tree.retrieve&param=[AUTH TOKEN]&param=294385&param=7
 
