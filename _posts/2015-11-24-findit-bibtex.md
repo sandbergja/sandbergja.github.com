@@ -6,6 +6,7 @@ categories: Systems
 ---
 ##Background
 A number of goals related to proper citations in WR courses:
+
 - WR121 course objective: Cite sources using Modern Language Association (MLA) conventions, including a 'Works Cited' page.
 - WR123 course objective: To help students use a systematic research process to present information in a format commonly assigned in college work.
 - WR227 outcome: Collect and document information with footnotes and bibliographies.
