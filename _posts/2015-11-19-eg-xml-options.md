@@ -37,6 +37,6 @@ http://libcat.linnbenton.edu/gateway?service=open-ils.cat&method=open-ils.cat.as
 
 Where 294385 is a TCN and 7 is our ou id.
 
-To get an auth token Within the staff client, press control+shift+f7 to get a command line interface at the top of the screen (as long as you have the DEBUG_CLIENT permission). Enter the command `ses()`, and you will get a token that you can use.
+To get an auth token within the staff client, press Ctrl+Shift+F7 to get a command line interface at the top of the screen (as long as you have the DEBUG_CLIENT permission). Enter the command `ses()` and press execute.  An alert box will appear containing a token that you can use.
 
-The gateway there is actually an older mechanism for external clients to access OpenSRF, and newer code uses osrf-http-translator, but that service expects you to POST your requests instead of GET them and the format is more complicated.
+Note that this gateway is an older one, but fortunately it allows you to send GET requests.
