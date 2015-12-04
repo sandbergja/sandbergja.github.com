@@ -24,10 +24,10 @@ However, I felt nervous about storing fully formatted HTML or XML in the MARC fi
 
 Here is the workflow I settled on:
 
-1. [Python script](https://github.com/sandbergja/blacklight_ingest_scripts/blob/master/bibtex_functions.py) extracts relevant MARC data and creates BibTeX string.
-2. BibTeX string is indexed in its own solr field.
-3. [Ruby helper script](https://github.com/sandbergja/discovery_layer/blob/master/app/helpers/citation_helper.rb) seeks out this solr field.  If it can't find one that it can parse, it generates one on the fly.
-4. Ruby script converts the BibTeX string to CSL.
-5. The citeproc gem eats CSL and creates a properly formatted citation in the styles that we specify.
+1. A [python script](https://github.com/sandbergja/blacklight_ingest_scripts/blob/master/bibtex_functions.py) extracts relevant MARC data and creates BibTeX string.
+2. SolrMARC indexes the BibTeX string in [its own solr field](https://github.com/sandbergja/discovery_layer/blob/master/config/SolrMarc/index.properties).
+3. A [ruby helper script](https://github.com/sandbergja/discovery_layer/blob/master/app/helpers/citation_helper.rb) seeks out this solr field.  If it can't find one that it can parse, it generates one on the fly.
+4. This ruby script converts the BibTeX string to CSL.
+5. The citeproc gem eats the CSL string and returns properly formatted citations in the styles that we specify.
 6. The formatted citation is displayed to the user.
 
