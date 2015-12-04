@@ -13,6 +13,7 @@ categories: open-culture
 
 ##Activities
 
+* We had a table at [College Night](http://www.linnbenton.edu/college-night) to engage with prospective students.
 * For the more coding-focused among us, we attempted two [Project Euler](https://projecteuler.net/) coding problems.  We spent most of each Project Euler meeting talking through a problem's interesting features and possible algorithms.  In the last few minutes, we (successfully) took a stab at a Python or Java solution.
 
 ##Discussions and presentations
