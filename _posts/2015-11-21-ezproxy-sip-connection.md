@@ -52,5 +52,7 @@ impact a patron's ability to access databases.
 Since Evergreen -- unlike EZProxy's built-in authentication -- is case sensitive, we had several patrons try to log in to EzProxy with a lower-case "x" in their X number.  I added a very simple script to the user field in docs/login.htm that forces capitals when folks type their X number into the proxy server login:
 
 {% highlight html %}
-<input type="text" name="user" id="user" onkeypress="javascript:{this.value=this.value.toUpperCase();}" /><label for="user"> Your X number (or OSU student ID number)</label
+<input type="text" name="user" id="user"
+  onkeypress="javascript:{this.value=this.value.toUpperCase();}" />
+<label for="user"> Your X number (or OSU student ID number)</label>
 {% endhighlight %}
