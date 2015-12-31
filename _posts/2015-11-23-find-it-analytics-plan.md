@@ -28,3 +28,6 @@ To inform interface design and information literacy instruction:
 To determine whether or not additional qualitative assessment is required:
 
 * Percentage of users who return within three months
+* 
+
+Other analytics gem for RoR projects: https://github.com/jronallo/blacklight_google_analytics
