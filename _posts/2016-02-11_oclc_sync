@@ -1,3 +1,12 @@
+---
+layout: post
+title: Syncronizing OCLC holdings
+tags: OCLC Evergreen
+categories: systems
+---
+In early 2016, we syncronized our OCLC holdings with our actual holdings found in Evergreen.
+
+{% highlight sql %}
 SELECT xpath('//m:datafield[@tag="035"]/m:subfield[@code="a"]/text()',
   b.marc::xml, ARRAY[ARRAY['m','http://www.loc.gov/MARC21/slim']])::VARCHAR as oclc
   FROM biblio.record_entry b
@@ -17,3 +26,4 @@ SELECT xpath('//m:datafield[@tag="035"]/m:subfield[@code="a"]/text()',
   AND c.circ_lib=7
   AND b.id != -1
   AND c.barcode NOT ILIKE '%SITE%';
+{% endhighlight %}
