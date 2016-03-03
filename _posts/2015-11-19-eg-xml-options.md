@@ -30,6 +30,10 @@ A more documented standard!  Gives you pretty much the same data, though
 
 http://libcat.linnbenton.edu/opac/extras/opensearch/1.1/-/marcxml-full/tcn/22222
 
+###UnAPI
+
+https://libcat.linnbenton.edu/opac/extras/unapi?id=tag:U2@bre:biblio_record_entry/280157&format=holdings_xml-full
+
 
 ##JSON
 I had a request that our Find It interface include due dates for holdings that are checked out.  Jason at Equinox suggested that I take a look at using OpenSRF to get these data:
