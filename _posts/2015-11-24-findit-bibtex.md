@@ -4,7 +4,10 @@ title: Using BibTeX and citeproc to provide accurate citations in a Blacklight-b
 tags: Blacklight BibTeX
 categories: Systems
 ---
-##Background
+
+Background
+==========
+
 LBCC's writing courses have a number of goals related to proper citations:
 
 - WR121 has the following course objective: "Cite sources using Modern Language Association (MLA) conventions, including a 'Works Cited' page."
@@ -15,10 +18,14 @@ As such, our information instruction sessions devote time to demonstrating use o
 
 Blacklight's built-in citation feature creates APA, MLA, and Chicago citation, thanks to some hard work from developers at Stanford.  However, these built-in citations contain countless formatting mistakes, particularly for non-book items.
 
-###Citeproc
+Citeproc
+--------
+
 The Ruby implementation of Citeproc converts Citation Style Language (CSL) strings into properly formatted citations for dozens of different citation standards.  These technologies form the basis of popular citation software like Zotero and Mendeley.  I wanted to harness some of the [Citeproc gems](https://github.com/inukshuk/citeproc)' power and flexibility to improve the citations I was seeing. 
 
-##Overview of a Citeproc-based workflow
+Overview of a Citeproc-based workflow
+-------------------------------------
+
 To save users' time, I wanted to run as much of this process while documents are initially indexed into the collection, rather than when the user actually wants to create a citation.
 However, I felt nervous about storing fully formatted HTML or XML in the MARC files I indexed.  I also wanted to retain the flexibility of switching citation styles according to demand without having to re-index our entire collection.  I decided to store information in the very simple (but descriptive) BibTeX format during index time, leaving Citeproc to run its magic when users requested a citation.
 
