@@ -7,10 +7,11 @@ I am a systems/cataloging librarian working at a community college in rural Oreg
 Several research interests inform my work:
 
 * Library linked data and authority control
-* Evidence-based evaluation of cataloging practices
+* Evidence-based evaluation of cataloging practices and discovery systems
+* Critical cataloging
 * Information needs of transgender people
 * Information-seeking behavior of community college students
-* Intersections between librarianship and social work
+* The healing power of information
 
 ## List of posts
 Here's what I've got:
