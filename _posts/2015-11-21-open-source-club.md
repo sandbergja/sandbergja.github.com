@@ -17,6 +17,7 @@ categories: open-culture
 * For the more coding-focused among us, we attempted two [Project Euler](https://projecteuler.net/) coding problems.  We spent most of each Project Euler meeting talking through a problem's interesting features and possible algorithms.  In the last few minutes, we (successfully) took a stab at a Python or Java solution.
 
 ##Discussions and presentations
+
 * We had a lively discussion of [John Deere's proprietary tractor software](http://www.wired.com/2015/04/dmca-ownership-john-deere/).
 * We have been intrigued by the [Interplanetary Internet](https://en.wikipedia.org/wiki/Interplanetary_Internet) and have devoted a lot of discussion to that.
 * A member is very interested in the societal ramifications of open culture and brought our attention to the [Open Source Ecology](http://opensourceecology.org/) project.
