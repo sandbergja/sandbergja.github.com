@@ -10,11 +10,13 @@ While preparing for a major weeding project, our staff expressed a concern that 
 OCLC doesn't provide reports of unique items, so I created my own workflow for finding these data.  I ran a report in Evergreen to pull out titles, call numbers, and OCLC numbers:  
 
 Displayed fields
+
 * column renamed oclc: Bibliographic Record::Flattened MARC Fields::Normalized Value
 * column renamed call_number: Bibliographic Record::Call Numbers::Call Number Label
 * column renamed title: Bibliographic Record::Simple Record Extracts::Title Proper
 
 Base Filters
+
 * Bibliographic Record::Is Deleted = false
 * Bibliographic Record::Call Numbers::Item::Circ lib is ours
 * Bibliographic Record::Call Numbers::Item::Is deleted = false
