@@ -31,8 +31,8 @@ Backstage was also kind enough to put URIs into subfield $0 of authorized fields
 a relatively small step that helps us to prepare for a linked data environment.  Evergreen uses $0 for its own internal
 linking purposes, so we swapped those URIs over to subfield $9 for now, but all those data are still there. :-D
 
-Catching unauthorized headings
-==============================
+Finding unauthorized headings
+=============================
 
 I have several SQL queries that help me identify headings in our bibliographic records that don't match any of our authority
 records.  Most of them are pretty slow, and could probably be improved, but are better than nothing!
