@@ -71,7 +71,8 @@ Finally, to check 650$a subfields (I also use this one for 651s):
     )), '[[:punct:]]', ''))
     AS bib_heading
     FROM biblio.record_entry
-    WHERE NOT deleted) bibs
+    WHERE NOT deleted
+    AND b.create_date > [SOME RECENT CREATE DATE GOES HERE]) bibs
     WHERE bib_heading NOT IN (SELECT DISTINCT trim(both from regexp_replace(sort_value, '[[:punct:]]', '')) FROM authority.simple_heading)
     AND bib_heading NOT LIKE '%fictitious character%'
     LIMIT 100;
