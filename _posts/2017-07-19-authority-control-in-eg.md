@@ -67,12 +67,12 @@ Finally, to check 650$a subfields (I also use this one for 651s):
     SELECT bib_heading FROM (
     SELECT DISTINCT
     trim(both from regexp_replace(lower(unnest(
-    xpath('//m:datafield[@tag="650"]/m:subfield[@code="a"]/text()', marc::xml, ARRAY[ARRAY['m','http://www.loc.gov/MARC21/slim']])::varchar[]
+    xpath('//m:datafield[@tag="650" and @ind2="0"]/m:subfield[@code="a"]/text()', marc::xml, ARRAY[ARRAY['m','http://www.loc.gov/MARC21/slim']])::varchar[]
     )), '[[:punct:]]', ''))
     AS bib_heading
     FROM biblio.record_entry
     WHERE NOT deleted
-    AND b.create_date > [SOME RECENT CREATE DATE GOES HERE]) bibs
+    AND create_date < (now() - interval '1 month')) bibs
     WHERE bib_heading NOT IN (SELECT DISTINCT trim(both from regexp_replace(sort_value, '[[:punct:]]', '')) FROM authority.simple_heading)
     AND bib_heading NOT LIKE '%fictitious character%'
     LIMIT 100;
