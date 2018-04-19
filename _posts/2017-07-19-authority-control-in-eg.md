@@ -64,13 +64,17 @@ numbers at the end):
 
 Finally, to check 650$a subfields (I also use this one for 651s):
 
-    SELECT DISTINCT trim(both from regexp_replace(value, '[[:punct:]]', ''))
-    FROM metabib.full_rec m, biblio.record_entry b
-    WHERE m.record=b.id AND NOT b.deleted AND tag ='650' AND subfield = 'a' AND ind2='0'
-    AND trim(both from regexp_replace(value, '[[:punct:]]', '')) NOT IN
-        (SELECT DISTINCT trim(both from regexp_replace(sort_value, '[[:punct:]]', ''))
-        FROM authority.simple_heading)
-    AND value NOT LIKE '%fictitious character%';
+    SELECT bib_heading FROM (
+    SELECT DISTINCT
+    trim(both from regexp_replace(lower(unnest(
+    xpath('//m:datafield[@tag="650"]/m:subfield[@code="a"]/text()', marc::xml, ARRAY[ARRAY['m','http://www.loc.gov/MARC21/slim']])::varchar[]
+    )), '[[:punct:]]', ''))
+    AS bib_heading
+    FROM biblio.record_entry
+    WHERE NOT deleted) bibs
+    WHERE bib_heading NOT IN (SELECT DISTINCT trim(both from regexp_replace(sort_value, '[[:punct:]]', '')) FROM authority.simple_heading)
+    AND bib_heading NOT LIKE '%fictitious character%'
+    LIMIT 100;
     
 I throw the results into a [script that fetches matching authority records from the Library of Congress](https://github.com/sandbergja/dlc_authority_fetcher)
 , and then review anything my script couldn't find to see whether the bib record needs to be corrected, or we need to make
