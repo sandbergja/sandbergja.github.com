@@ -72,7 +72,7 @@ Finally, to check 650$a subfields (I also use this one for 651s):
     AS bib_heading
     FROM biblio.record_entry
     WHERE NOT deleted
-    AND create_date < (now() - interval '1 month')) bibs
+    AND create_date > (now() - interval '1 month')) bibs
     WHERE bib_heading NOT IN (SELECT DISTINCT trim(both from regexp_replace(sort_value, '[[:punct:]]', '')) FROM authority.simple_heading)
     AND bib_heading NOT LIKE '%fictitious character%'
     LIMIT 100;
